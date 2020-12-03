@@ -1,0 +1,94 @@
+.contain{
+    margin: 40px auto;
+    text-align: center;
+}
+.contain .top{
+    margin-bottom: 10px;
+}
+.contain .top button{
+    height: 28px;
+    background-color: #008c8c;
+    color: #fff;
+    border-radius: 4px;
+    padding: 5px 15px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.contain .top button.active{
+    background-color: firebrick;
+}
+.contain .end{
+    font-size: 13px;
+    margin-top: 10px;
+}
+table{
+    border-spacing: 1px;
+    background: #929196;
+    margin: 0 auto;
+}
+td{
+    padding: 0;
+    width: 15px;
+    height: 15px;
+    background: #ccc;
+    border: 2px solid;
+    border-color:#fff #a1a1a1 #a1a1a1 #fff ;
+    text-align: center;
+    font-weight: bold;
+    line-height: 15px;
+}
+td.zero{
+    border-color: #d9d9d9;
+    background: #d9d9d9;
+}
+td.one{
+    border-color: #d9d9d9;
+    background: #d9d9d9;
+    color: rgb(23, 23, 228);
+}
+td.two{
+    border-color: #d9d9d9;
+    background: #d9d9d9;
+    color: #008c8c;
+}
+td.three{
+    border-color: #d9d9d9;
+    background: #d9d9d9;
+    color: red;
+}
+td.four{
+    border-color: #d9d9d9;
+    background: #d9d9d9;
+    color:rgb(22, 177, 138);
+}
+td.five{
+    border-color: #d9d9d9;
+    background: #d9d9d9;
+    color: rgb(28, 240, 64);
+}
+td.six{
+    border-color: #d9d9d9;
+    background: #d9d9d9;
+    color: rgb(94, 31, 212);
+}
+td.seven{
+    border-color: #d9d9d9;
+    background: #d9d9d9;
+    color: rgb(130, 31, 197);
+}
+td.eigth{
+    border-color: #d9d9d9;
+    background: #d9d9d9;
+    color: rgb(31, 170, 212);
+}
+.mine{
+    background: #d9d9d9 url(../img/mine.png) no-repeat center;
+    background-size: cover;
+}
+.flag{
+    background: #ccc url(../img/flag.png) no-repeat center;
+    background-size: cover;
+}

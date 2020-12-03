@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+    <link rel="stylesheet" href="./css/saolei.css">
+</head>
+<body>
+    <div class="contain">
+        <div class="top">
+            <button class="active">初级</button>
+            <button>中级</button>
+            <button>高级</button>
+            <button>重新开始</button>
+        </div>
+        <div class="main"></div>
+        <div class="end">
+            剩余雷数
+            <span></span>
+            时间
+            <span></span>s
+        </div>
+    </div>
+    
+    <!-- 1：创建表格方法（雷盘）
+    2：初始化方法  生成雷
+        随机数方法
+            随机数方法创建空数组，数组每位为索引值，数组随机排序，取前雷数量个为雷
+        填充已创建的squres数组
+            确定雷在给格子里的位置，遍历循环每个格子，每次n++，
+            若n=雷所对应的数值，则n所对应的位置是一个雷，将这个位置的type设置为mine,并确定其坐标
+            反之则为type则为数字，value=0(squres数组中每个格子都有相应的信息)
+    3：确定每个格子的数字的实际值
+        每个雷周围的数字加1，可重复加
+        创建找某个格子周围格子的方法
+            每个雷的周围通过坐标去寻找     (j-1,i-1)    (j,i-1)     (j+1,i-1)
+                                         (j-1,i)        (j,i)       (j+1,i)
+                                         (j-1,i+1)    (j,i+1)     (j+1,i+1)
+            通过双重循环得到八个坐标（自己本身，边界外，雷均要排除）
+        跟新所有的数字方法
+            通过找雷周围格子方法得到雷周围有效格子的数组，数组内的每个数组内部存储其其自身的行和列
+            通过已知的行和列用squres，使其value加1
+    4：通过点击事件获取格子里的具体信息
+        取消鼠标右键默认事件
+        左键点击显示是数字还是雷
+            如果是数字，分为0和非0，并给数字添加不同的样式
+                如果是0，创建找周围是0的方法，通过找格子周围格子的方法找到0周围的八个有效格子，通过格子的行和列在squres中判断值
+                若不为0，则显示出其value，若为0，则继续递归调用方法，为防止重复调用同一个格子，在已调用的格子上加锁，直到都不为0
+            如果是雷
+                给雷添加方法，显示雷盘所有的雷，其他区域点击事件不可用，给点击到的雷添加样式
+        右键点击事件插和取消小红旗，
+            每个点击过的格子已有className，没有className或者className为flag的格子右击将其className为flag或空
+            如果该格子的type为雷，则将allright属性为true，游戏成功，如果点击到的有一个不是雷，则该属性为false，则游戏失败
+        同时剩余雷数动态变化
+            通过设置的surpulsmine属性让其加减
+        通过surpulsmine值为0，且surpulsmine不可为负数
+            且allright为true时，游戏成功
+            allright为false时，游戏失败
+        右击变成小红旗后，不可左击
+    5：按钮事件
+        遍历前三个按钮，给每个被点击的按钮添加样式，并生成雷盘，每次生成新雷盘前将父级的innerhtml置空
+        初始调用第一种雷盘点击函数
+        给重新开始按钮添加点击事件，处理函数为初始化方法 -->
+
+        
+</body>
+<script src="./saolei.js"></script>
+</html>
